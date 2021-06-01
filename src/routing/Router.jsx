@@ -1,0 +1,33 @@
+import React from "react";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { routes } from "./routes";
+import { CircularProgress } from "./../modules/materialUI-module";
+export const Router = () => {
+  const lazyLoaderComponent = (path) => lazy(() => import(`../pages/${path}`));
+  return (
+    <div className="router-container">
+      <BrowserRouter>
+        <Suspense fallback={<CircularProgress />}>
+          <Switch>
+            {routes.map((route) => {
+              return (
+                <Route
+                  key={route.id}
+                  path={`/${route.path}`}
+                  component={lazyLoaderComponent(route.componentFileName)}
+                />
+              );
+            })}
+            <Route path="/" exact>
+              <Redirect to="/home" />
+            </Route>
+            <Route path="*">
+              <Redirect to="/home" />
+            </Route>
+          </Switch>
+        </Suspense>
+      </BrowserRouter>
+    </div>
+  );
+};
