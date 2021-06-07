@@ -1,0 +1,13 @@
+@import "./../theme/mixins.scss";
+
+.ba-postDetail {
+  @include flexContainer(center, center);
+  flex-direction: column;
+  padding: 10px;
+  .MuiTypography-h5 {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
