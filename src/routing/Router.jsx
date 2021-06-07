@@ -3,6 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { routes } from "./routes";
 import { CircularProgress } from "./../modules/materialUI-module";
+
 export const Router = () => {
   const lazyLoaderComponent = (path) => lazy(() => import(`../pages/${path}`));
   return (
@@ -13,9 +14,9 @@ export const Router = () => {
             {routes.map((route) => {
               return (
                 <Route
+                  component={lazyLoaderComponent(route.componentFileName)}
                   key={route.id}
                   path={`/${route.path}`}
-                  component={lazyLoaderComponent(route.componentFileName)}
                 />
               );
             })}
