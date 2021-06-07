@@ -16,7 +16,6 @@ export default function Timer() {
   return (
     <div>
       <p style={timerStyle} className="timer">
-        {" "}
         {date.toLocaleTimeString()}
       </p>
     </div>
