@@ -12,6 +12,8 @@ export default function Home() {
   function handleRedirect() {
     history.push("/posts");
   }
+
+  let centeredText = { textAlign: "center" };
   return (
     <div className="ba-homePage">
       <div className="sideImage">
@@ -20,13 +22,22 @@ export default function Home() {
       <div className="landing">
         <BookIcon />
         <h2>Blog App</h2>
-        <h5>Welcome to this super react-based app to manage blogs.</h5>
-        <Timer />
-        <Button variant="contained" color="secondary" onClick={handleRedirect}>
+        <h5 style={centeredText}>
+          Welcome to this super react-based app to manage blogs.
+        </h5>
+        <div className="timer">
+          <Timer />
+        </div>
+        <Button
+          data-testid="enterButton"
+          variant="contained"
+          color="secondary"
+          onClick={handleRedirect}
+        >
           Enter
         </Button>
-        <p className="author">
-          Designed and developed by Alejandro Martínez De La Haba
+        <p className="author" style={centeredText}>
+          Designed and developed by alexdelahaba
         </p>
       </div>
     </div>
