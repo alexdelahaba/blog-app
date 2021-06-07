@@ -4,16 +4,22 @@ export const theme = createMuiTheme({
   palette: {
     type: "dark",
     primary: {
+      contrastText: "#000",
+      dark: "#b68900",
       light: "#ffea59",
       main: "#edb820",
-      dark: "#b68900",
-      contrastText: "#000",
     },
     secondary: {
+      contrastText: "#fff",
+      dark: "#000000",
       light: "#484848",
       main: "#212121",
-      dark: "#000000",
-      contrastText: "#fff",
+    },
+    tertiary: {
+      contrastText: "#000",
+      dark: "#b44600",
+      light: "#ffa551",
+      main: "#ed7520",
     },
   },
 });
