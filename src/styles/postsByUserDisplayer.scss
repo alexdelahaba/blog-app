@@ -1,0 +1,27 @@
+@import "./../theme/mixins.scss";
+.ba-postsByUserDisplayer {
+  @include flexContainer(center, center);
+  flex-direction: column;
+
+  .MuiCollapse-container {
+    background-color: #f8b779;
+  }
+  div.MuiAccordionSummary-root.Mui-expanded {
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  div.MuiPaper-root {
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  div.MuiPaper-root.Mui-expanded {
+    margin-top: 20px;
+  }
+  .title {
+    font-weight: bold;
+    text-align: center;
+  }
+  .body {
+    font-size: 16px;
+  }
+}
