@@ -1,0 +1,10 @@
+@import "./../theme/mixins.scss";
+.ba-userSelector {
+  @include flexContainer(center, center);
+  .MuiInput-underline:after {
+    border-bottom: none !important;
+  }
+  .MuiInputBase-formControl:hover {
+    padding: 0 !important;
+  }
+}
