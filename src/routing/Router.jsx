@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { routes } from "./routes";
 import { CircularProgress } from "./../modules/materialUI-module";
@@ -8,7 +8,7 @@ export const Router = () => {
   const lazyLoaderComponent = (path) => lazy(() => import(`../pages/${path}`));
   return (
     <div className="router-container">
-      <BrowserRouter>
+      <HashRouter>
         <Suspense fallback={<CircularProgress />}>
           <Switch>
             {routes.map((route) => {
@@ -28,7 +28,7 @@ export const Router = () => {
             </Route>
           </Switch>
         </Suspense>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
