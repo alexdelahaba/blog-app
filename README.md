@@ -9,7 +9,10 @@
       - [Landscape](#landscape)
 # Blog app 🚀
 
-This repository contains a project known as Blog app. It has been developed using React as framework and Material UI as the components library, it is also completely responsive, hence, it can be used in all kind of devices.
+This repository contains a project known as Blog app.
+It has been deployed using github pages and can be visited with the following url:
+https://alexdelahaba.github.io/blog-app/ 
+It has been developed using React as framework and Material UI as the components library, it is also completely responsive, hence, it can be used in all kind of devices.
 It can be used to three main goals:
 * See the whole list of posts
 * By clicking on one, you access the detail page in which are displayed the comments contained in the post
